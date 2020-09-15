@@ -7,7 +7,7 @@ searchInput.addEventListener("input", () => {
   clearTimeout(timeout);
   timeout = setTimeout(() => {
     resultsDiv.innerHTML = "";
-    searchValue(searchInput.value);
+    searchValue(searchInput.value.toUpperCase()[0]);
   }, 2000);
 });
 
@@ -40,6 +40,16 @@ const displayData = (result, val) => {
   for (let i = 0; i < result.length; i++) {
     val === result[i].gender ? addData(result[i]) : null;
   }
+  resultsDiv.childElementCount === 0 ? noResultsFound() : null;
+};
+
+const noResultsFound = () => {
+  const div = document.createElement("div");
+  const pTag = document.createElement("p");
+  pTag.innerText = "No Results Found";
+  div.appendChild(pTag);
+  div.classList.add("row", "centered");
+  resultsDiv.appendChild(div);
 };
 
 const addData = (data) => {
