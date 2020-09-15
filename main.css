@@ -5,12 +5,18 @@
   height: 100%;
 }
 
-body {
+.column {
   display: flex;
   flex-direction: column;
+}
+
+.centered {
   justify-content: center;
   align-items: center;
-  height: 100px;
+}
+
+.results {
+  align-items: stretch;
 }
 
 h1 {
@@ -20,4 +26,10 @@ h1 {
 input {
   height: 30px;
   width: 175px;
+}
+
+.name {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
 }
