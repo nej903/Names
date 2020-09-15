@@ -10,9 +10,18 @@
   flex-direction: column;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
 .centered {
   justify-content: center;
   align-items: center;
+}
+
+.row.centered > p {
+  padding: 20px;
 }
 
 .results {
