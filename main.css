@@ -25,16 +25,19 @@
 }
 
 .results {
-  align-items: stretch;
+  align-items: initial;
+  height: 60%;
 }
 
 h1 {
   padding: 10px;
+  height: 80px;
 }
 
 input {
   height: 30px;
   width: 175px;
+  margin-bottom: 2%;
 }
 
 .name {
